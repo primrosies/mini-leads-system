@@ -93,5 +93,5 @@ document.getElementById("addBtn").addEventListener("click", () => {
 	neighborhoodInput.value = "";
 });
 
-renderLeads()
-renderStatistics()
+renderLeads();
+renderStatistics();
