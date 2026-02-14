@@ -35,18 +35,17 @@ function saveToLocalStorage() {
 
 // Handle button click for Portuguese interface
 function handleAddLead() {
-	const nameInput = document.getElementById("nameInput")
-	const neighborhoodInput = document.getElementById("neighborhoodInput")
+	const nameInput = document.getElementById("nameInput");
+	const neighborhoodInput = document.getElementById("neighborhoodInput");
 	
-	const name = nameInput.value
-	const neighborhood = neighborhoodInput.value
+	const name = nameInput.value.trim();
+	const neighborhood = neighborhoodInput.value.trim();
 
-	if (!name || !neighborhood) return 
+	if (!name || !neighborhood) return; 
 
-	addLead(name, neighborhood)
-
-	nameInput.value = ""
-	neighborhoodInput.value = ""
+	addLead(name, neighborhood);
+	nameInput.value = "";
+	neighborhoodInput.value = "";
 }
 
 
