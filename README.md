@@ -83,9 +83,3 @@ showStatistics()
 - Refactor using React
 - Evolve into a full-stack application
 
----
-
-## Author
-
-Aline Provesi  
-Software Engineering Student
