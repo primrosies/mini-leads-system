@@ -3,23 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
         <title>Mini Lead Management System</title>
     </head>
 
     <body>
-        <h1>Mini Lead Management System</h1>
+        <div class="container">
+            <h1>Mini Lead Management System</h1>
 
-        <div>
-            <input type="text" id="nameInput" placeholder="Nome do Proprietário">
-            <input type="text" id="neighborhoodInput" placeholder="Bairro">
-            <button onclick="handleAddLead()">Adicionar Lead</button>
-        </div>
+            <div>
+                <input type="text" id="nameInput" placeholder="Nome do Proprietário">
+                <input type="text" id="neighborhoodInput" placeholder="Bairro">
+                <button onclick="handleAddLead()">Adicionar Lead</button>
+            </div>
         
-        <h2>Lista de Leads</h2>
-        <ul id="leadsList"></ul>
+            <h2>Lista de Leads</h2>
+            <ul id="leadsList"></ul>
 
-        <h2>Estatísticas</h2>
-        <p id="stats"></p>
+            <h2>Estatísticas</h2>
+            <p id="stats"></p>
+        </div>
 
         <script src="script.js"></script>
     </body>

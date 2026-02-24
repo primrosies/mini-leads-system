@@ -1,10 +1,6 @@
 let leads = JSON.parse(localStorage.getItem("leads")) || [];
 
 
-function saveToLocalStorage() {
-	localStorage.setItem("leads", JSON.stringify(leads))
-}
-
 function addLead(name, neighborhood){
     const newLead = {
         id: Date.now(),
@@ -60,13 +56,12 @@ function renderLeads() {
 
 		leadsList.innerHTML += `
 			<li>
-			Nome: ${lead.name} - Bairro: ${lead.neighborhood} - Status: ${lead.status}
+			Nome: ${lead.name} - Bairro: ${lead.neighborhood} - Status: ${statusLabel(lead.status)}
 			${lead.status === "new"
 				? `<button onclick="markAsCaptured(${lead.id})">Marcar como captado</button>`
 				: ""
 			}
-			</li>
-		`
+			</li>`
 	});
 }
 
@@ -93,5 +88,11 @@ document.getElementById("addBtn").addEventListener("click", () => {
 	neighborhoodInput.value = "";
 });
 
+
+function saveToLocalStorage() {
+	localStorage.setItem("leads", JSON.stringify(leads))
+}
+
+saveToLocalStorage();
 renderLeads();
 renderStatistics();
